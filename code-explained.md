@@ -8,13 +8,13 @@ description: First draft
 
 This is the write function it needs a path, file and res\(data\) this function will write to any place aslong it has a path when the servers/site doesn't exist it will create the required servers/sites.
 
-```text
+```javascript
 if (fs.existsSync(pathToFile) && JSON.parse(fs.readFileSync(pathToFile, 'utf8').length > 0))
 ```
 
 If the servers /site exists and isn't empty it will update the data in the file array else it will make the array and push the data in it.
 
-```text
+```javascript
 function write (res, path, file) {
   let updatedData = []
   let pathToFile = path + file
@@ -48,7 +48,7 @@ function write (res, path, file) {
 
 This function get all the severs in the dataset servers can contain multiple sites.
 
-```text
+```javascript
 async function getServers () {
   const servers = []
   fs.readdirSync(path).forEach(dir => {
@@ -64,7 +64,7 @@ async function getServers () {
 
 This function awaits the all the servers, after the servers are loaded it will read al the servers an get all the sites from them.
 
-```text
+```javascript
 async function getSites () {
   const sites = []
   const servers = await getServers()
@@ -86,7 +86,7 @@ This function gets the servers and the sites, foreach it will make a new object 
 
 {% tabs %}
 {% tab title="Code" %}
-```text
+```javascript
 async function getEndpoints () {
   const getEndpoints = []
   const servers = await getServers()
@@ -125,7 +125,7 @@ async function getEndpoints () {
 {% endtab %}
 
 {% tab title="Response" %}
-```text
+```javascript
   [
     {
       "id": "ayp6ukwrbzybvj2bowli0y94w",

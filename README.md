@@ -28,7 +28,7 @@ Return all available servers and site.
 Returns the servers and site structure.
 {% endapi-method-response-example-description %}
 
-```
+```javascript
 [
   {
     "id": "1k2lv2sxuqta0qr0ilubhrf53",
@@ -80,7 +80,7 @@ return all recently added values
 This array will hold al the most recent added values.
 {% endapi-method-response-example-description %}
 
-```
+```javascript
 [
   {
     "server_name": "server_name",
@@ -136,7 +136,7 @@ server name
 Sites available dates
 {% endapi-method-response-example-description %}
 
-```
+```javascript
 [
   "2020-01-01",
   "2019-12-18",
@@ -200,7 +200,7 @@ server name
 Returns all the files associated with the site.
 {% endapi-method-response-example-description %}
 
-```
+```javascript
 [
   "log-1-1-2020.json",
   "log-18-12-2019.json",
@@ -264,7 +264,7 @@ server name
 An array with all todays entries.
 {% endapi-method-response-example-description %}
 
-```
+```javascript
 {
  "server_name": "server_name",
  "name": "site_name",
@@ -318,7 +318,7 @@ server name
 This endpoint return data worth the selected amount of days
 {% endapi-method-response-example-description %}
 
-```
+```javascript
 [
    {
     "server_name": "server_name",
@@ -389,7 +389,7 @@ server name
 Return the uptime and downtime form a site in %
 {% endapi-method-response-example-description %}
 
-```
+```javascript
 [
   {
     "uptime": 99.9702469503124,
